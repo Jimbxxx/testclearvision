@@ -3139,7 +3139,7 @@ code {
     background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.3))
 }
 
-/*! ClearVision v7.0.1 by ClearVision Team */
+/*! JimboCord v7.0.1 by JimboCord Team */
 .outer_c0bea0:not(.custom-user-profile-theme) .role_dfa8b6 {
     border-radius: 4px;
     position: relative
@@ -3182,7 +3182,7 @@ code {
     border: none
 }
 
-/*! ClearVision v7.0.1 by ClearVision Team */
+/*! JimboCord v7.0.1 by JimboCord Team */
 .mask__44b0c rect[fill*="#82838b"] {
     fill: var(--hsl-offline-color)
 }
@@ -3203,7 +3203,7 @@ code {
     fill: var(--hsl-streaming-color)
 }
 
-/*! ClearVision v7.0.1 by ClearVision Team */
+/*! JimboCord v7.0.1 by JimboCord Team */
 .layer__960e4 {
     background-color: rgba(0, 0, 0, 0)
 }
@@ -3289,7 +3289,7 @@ code {
     background-color: var(--hsl-popout-shading)
 }
 
-/*! ClearVision v7.0.1 by ClearVision Team */
+/*! JimboCord v7.0.1 by JimboCord Team */
 .standardSidebarView__23e6b {
     background: rgba(0, 0, 0, 0)
 }
@@ -3299,7 +3299,7 @@ code {
     padding: 20px 8px 60px 20px
 }
 
-/*! ClearVision v7.0.1 by ClearVision Team */
+/*! JimboCord v7.0.1 by JimboCord Team */
 .selectedBackground_e681d1 {
     background: rgba(0, 0, 0, 0)
 }
@@ -3473,8 +3473,8 @@ code {
 }
 
 .container__06283 {
-    -webkit-mask-image: url(https://clearvision.github.io/icons/pill.svg);
-    mask-image: url(https://clearvision.github.io/icons/pill.svg);
+    -webkit-mask-image: url(https://JimboCord.github.io/icons/pill.svg);
+    mask-image: url(https://JimboCord.github.io/icons/pill.svg);
     background: var(--hsl-main-color) !important
 }
 
@@ -3527,7 +3527,7 @@ code {
     background: rgba(0, 0, 0, 0)
 }
 
-/*! ClearVision v7.0.1 by ClearVision Team */
+/*! JimboCord v7.0.1 by JimboCord Team */
 .settingCard__1a4ef,
 .settingCard__1a4ef.active__1a4ef {
     background: var(--hsl-card-shading)
@@ -3580,7 +3580,7 @@ code {
     background-color: hsl(from var(--hsl-success-color) h s l/0.6)
 }
 
-/*! ClearVision v7.0.1 by ClearVision Team */
+/*! JimboCord v7.0.1 by JimboCord Team */
 .itemSelected_ec9088 {
     border: 2px solid var(--hsl-main-color)
 }
@@ -3817,7 +3817,7 @@ code {
     background: var(--hsl-card-shading)
 }
 
-/*! ClearVision v7.0.1 by ClearVision Team */
+/*! JimboCord v7.0.1 by JimboCord Team */
 .panels_c48ade {
     background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.5));
     border-radius: 0;
@@ -3886,7 +3886,7 @@ code {
     color: var(--interactive-normal)
 }
 
-/*! ClearVision v7.0.1 by ClearVision Team */
+/*! JimboCord v7.0.1 by JimboCord Team */
 .keyboard-mode .focusStroke_cc5dd2 {
     stroke: var(--focus-color);
     stroke-width: 4px
@@ -3961,7 +3961,7 @@ code {
     background: var(--hsl-main-color)
 }
 
-/*! ClearVision v7.0.1 by ClearVision Team */
+/*! JimboCord v7.0.1 by JimboCord Team */
 .wrapperCommon__29444 .mainContent__29444 .name__29444 {
     flex: 1
 }
@@ -4030,7 +4030,7 @@ code {
     display: none
 }
 
-/*! ClearVision v7.0.1 by ClearVision Team */
+/*! JimboCord v7.0.1 by JimboCord Team */
 .newChannel__599fa {
     background: var(--hsl-main-color) !important;
     color: var(--header-primary)
@@ -4214,7 +4214,7 @@ code {
     color: #fff
 }
 
-/*! ClearVision v7.0.1 by ClearVision Team */
+/*! JimboCord v7.0.1 by JimboCord Team */
 .privateChannels__35e86 {
     background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.2))
 }
@@ -4308,7 +4308,7 @@ code {
     color: var(--interactive-active)
 }
 
-/*! ClearVision v7.0.1 by ClearVision Team */
+/*! JimboCord v7.0.1 by JimboCord Team */
 .sidebar_c48ade {
     background: rgba(0, 0, 0, 0)
 }
@@ -4368,7 +4368,7 @@ code {
     --streaming-color: #593695;
     --offline-color: #808080;
     --background-shading-percent: 100%;
-    --background-image: url(https://clearvision.github.io/images/sapphire.jpg);
+    --background-image: url(https://JimboCord.github.io/images/sapphire.jpg);
     --background-position: center;
     --background-size: cover;
     --background-attachment: fixed;
@@ -4383,7 +4383,7 @@ code {
     --user-modal-size: var(--background-size);
     --user-modal-attachment: var(--background-attachment);
     --user-modal-filter: var(--background-filter);
-    --home-icon: url(https://clearvision.github.io/icons/discord.svg);
+    --home-icon: url(https://JimboCord.github.io/icons/discord.svg);
     --home-size: cover;
     --main-font: "gg sans", Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
     --code-font: Consolas, "gg mono", "Liberation Mono", Menlo, Courier, monospace;
