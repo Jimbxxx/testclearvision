@@ -1,0 +1,125 @@
+/*! JimboCord - Vencord Addon v2.0.1 by JimboCord Team (Edited for Orange Theme, Performance, and Cool Enhancements) */
+
+/* Define orange-themed variables for consistency */
+:root {
+    --hsl-main-color: 30, 100%, 50%; /* Vibrant orange accent */
+    --hsl-card-shading: rgba(255, 165, 0, 0.15); /* Light orange-tinted shading for cards */
+    --hsl-popout-shading: rgba(255, 140, 0, 0.2); /* Darker orange for popouts */
+    --hsl-background-shading: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay to enhance background visibility */
+    --background-filter: blur(3px) brightness(1.1); /* Subtle blur and brightness for a vibrant feel */
+    --transition-speed: 0.2s; /* Faster transitions for better performance */
+}
+
+/* Optimized animations: Simplified for performance (reduced keyframes, hardware-accelerated properties) */
+@keyframes cv-channel-select {
+    from { transform: translateX(100%); } /* Use translateX for GPU acceleration */
+    to { transform: translateX(0); }
+}
+
+@keyframes cv-card-loading {
+    0% { opacity: 0.7; }
+    50% { opacity: 0.4; }
+    100% { opacity: 0.7; }
+}
+
+/* Quick actions pill: Added subtle orange glow on hover, removed unnecessary box-shadow for perf */
+.visual-refresh .vc-settings-quickActions-pill {
+    background: var(--hsl-card-shading);
+    border: 1px solid transparent;
+    border-radius: 8px; /* Rounded for cooler look */
+    transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.visual-refresh .vc-settings-quickActions-pill:hover {
+    background: var(--hsl-card-shading);
+    border-color: hsl(var(--hsl-main-color));
+    box-shadow: 0 0 8px hsl(var(--hsl-main-color) / 0.5); /* Subtle neon glow instead of heavy shadow */
+    transform: scale(1.02); /* Light zoom for interactivity, GPU-friendly */
+}
+
+/* Addon card: Similar optimizations, added rounded corners and subtle hover lift */
+.visual-refresh .vc-addon-card {
+    background: var(--hsl-card-shading);
+    border: none;
+    border-radius: 12px; /* Softer, modern corners */
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.visual-refresh .vc-addon-card:hover {
+    background: var(--hsl-card-shading);
+    transform: translateY(-2px); /* Lift effect for depth, better than scale for perf in some cases */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth, optimized */
+}
+
+/* Notification root: Orange-tinted background with blur for glass effect */
+.visual-refresh .vc-notification-root {
+    background: var(--hsl-popout-shading);
+    backdrop-filter: blur(5px); /* Cool glassmorphism, but limited to small elements for perf */
+    border-radius: 10px;
+}
+
+/* Spotify player: Fully transparent, but added orange border for visibility if needed */
+:is(.theme-light, .theme-dark) #vc-spotify-player {
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid hsl(var(--hsl-main-color) / 0.3); /* Subtle orange outline */
+}
+
+/* PinDMs icon: Kept simple, added hover color shift */
+.vc-pindms-collapse-icon {
+    color: currentColor;
+    transition: color var(--transition-speed) ease;
+}
+
+.vc-pindms-collapse-icon:hover {
+    color: hsl(var(--hsl-main-color)); /* Orange on hover for cool feedback */
+}
+
+/* Magane sticker window and modal: Integrated with Lilo & Stitch background (assumes vars from other file), added orange accents */
+.visual-refresh div#magane div.stickerWindow,
+.visual-refresh div#magane .stickersModal .modal-content {
+    background: var(--background-image) center/cover no-repeat;
+    background-attachment: var(--background-attachment);
+    filter: var(--background-filter);
+    border: 2px solid hsl(var(--hsl-main-color) / 0.4); /* Orange border for thematic tie-in */
+    border-radius: 15px; /* Curved for fun, Stitch-like vibe */
+    transition: filter var(--transition-speed) ease;
+}
+
+.visual-refresh div#magane div.stickerWindow:hover,
+.visual-refresh div#magane .stickersModal .modal-content:hover {
+    filter: var(--background-filter) brightness(1.2); /* Brighten on hover for energy */
+}
+
+.visual-refresh div#magane div.stickerWindow:before,
+.visual-refresh div#magane .stickersModal .modal-content:before {
+    background: var(--hsl-background-shading);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Packs toolbar: Orange shading with hover effect */
+.visual-refresh div#magane div.stickerWindow div.packs-toolbar {
+    background: var(--hsl-card-shading);
+    border-bottom: 1px solid hsl(var(--hsl-main-color) / 0.2);
+    transition: background var(--transition-speed) ease;
+}
+
+.visual-refresh div#magane div.stickerWindow div.packs-toolbar:hover {
+    background: hsl(var(--hsl-main-color) / 0.1); /* Light orange tint on hover */
+}
+
+/* Additional cool enhancements: Subtle pulse animation for loading states (optional, can remove if perf issue) */
+@keyframes subtle-pulse {
+    0% { box-shadow: 0 0 0 hsl(var(--hsl-main-color) / 0.3); }
+    50% { box-shadow: 0 0 10px hsl(var(--hsl-main-color) / 0.6); }
+    100% { box-shadow: 0 0 0 hsl(var(--hsl-main-color) / 0.3); }
+}
+
+.visual-refresh .vc-addon-card.loading { /* Assuming a .loading class; adjust if needed */
+    animation: subtle-pulse 2s infinite ease-in-out;
+}
