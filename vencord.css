@@ -1,111 +1,105 @@
-/*! ClearVision - Vencord Addon v7.0.1 by ClearVision Team (Edited for Orange Lilo & Stitch Theme, Performance, and Username Styling) */
+/*! Jimbocord v2.0.1 by Jimbo [@urthicc] */
 
-/* Define orange-themed variables for consistency */
+/* Define transition speed for performance */
 :root {
-    --hsl-main-color: 30, 100%, 50%; /* Vibrant orange accent */
-    --hsl-card-shading: rgba(255, 165, 0, 0.15); /* Light orange-tinted shading for cards */
-    --hsl-popout-shading: rgba(255, 140, 0, 0.2); /* Darker orange for popouts */
-    --hsl-background-shading: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay for background */
-    --background-filter: blur(3px) brightness(1.1); /* Subtle blur and brightness for vibrancy */
-    --hsl-username-color: 30, 90%, 55%; /* Slightly lighter orange for usernames */
-    --transition-speed: 0.2s; /* Fast transitions for performance */
+    --transition-speed: 0.15s; /* Fast transitions to avoid lag */
 }
 
-/* Optimized animations: Simplified for performance (GPU-accelerated) */
+/* Optimized animations: GPU-accelerated and simplified */
 @keyframes cv-channel-select {
-    from { transform: translateX(100%); }
+    from { transform: translateX(100%); } /* Use transform for performance */
     to { transform: translateX(0); }
 }
 
 @keyframes cv-card-loading {
     0% { opacity: 0.7; }
-    50% { opacity: 0.4; }
-    100% { opacity: 0.7; }
+    100% { opacity: 0.4; } /* Reduced keyframes for minimal reflows */
 }
 
-/* Username styling: Orange-themed with hover effect */
-.visual-refresh .username, 
-.visual-refresh .nameTag, 
-.visual-refresh .userTag, 
+/*! Jimbocord v2.0.1 by Jimbo [@urthicc] */
+
+/* Username styling: Neutral color with subtle hover effect */
+.visual-refresh .username,
+.visual-refresh .nameTag,
+.visual-refresh .userTag,
 .visual-refresh [class*="username"] {
-    color: hsl(var(--hsl-username-color)); /* Vibrant orange for usernames */
+    color: var(--text-normal, #dcddde); /* Default Discord light color for readability */
     transition: color var(--transition-speed) ease;
 }
 
-.visual-refresh .username:hover, 
-.visual-refresh .nameTag:hover, 
-.visual-refresh .userTag:hover, 
+.visual-refresh .username:hover,
+.visual-refresh .nameTag:hover,
+.visual-refresh .userTag:hover,
 .visual-refresh [class*="username"]:hover {
-    color: hsl(30, 100%, 70%); /* Lighter orange on hover for interactivity */
-    text-shadow: 0 0 4px hsl(var(--hsl-main-color) / 0.5); /* Subtle neon glow for Stitch vibe */
+    color: var(--text-link, #00b0f4); /* Discord’s link color for hover, cool and performant */
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3); /* Subtle shadow for flair, lightweight */
 }
 
-/* Quick actions pill: Subtle orange glow, rounded corners */
+/* Quick actions pill: Simplified for performance, subtle hover */
 .visual-refresh .vc-settings-quickActions-pill {
     background: var(--hsl-card-shading);
     border: 1px solid transparent;
-    border-radius: 8px;
-    transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    border-radius: 6px; /* Subtle rounding for modern look */
+    transition: border-color var(--transition-speed) ease, transform var(--transition-speed) ease;
 }
 
 .visual-refresh .vc-settings-quickActions-pill:hover {
     background: var(--hsl-card-shading);
-    border-color: hsl(var(--hsl-main-color));
-    box-shadow: 0 0 8px hsl(var(--hsl-main-color) / 0.5);
-    transform: scale(1.02);
+    border-color: var(--hsl-main-color);
+    transform: translateY(-1px); /* Light lift, GPU-friendly */
 }
 
-/* Addon card: Rounded corners, subtle hover lift */
+/* Addon card: Minimal styling, no heavy shadows */
 .visual-refresh .vc-addon-card {
     background: var(--hsl-card-shading);
     border: none;
-    border-radius: 12px;
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    border-radius: 8px; /* Rounded for a clean, cool look */
+    transition: transform var(--transition-speed) ease;
 }
 
 .visual-refresh .vc-addon-card:hover {
     background: var(--hsl-card-shading);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px); /* Subtle lift instead of shadow */
 }
 
-/* Notification root: Orange-tinted glassmorphism */
+/* Notification root: Lightweight background */
 .visual-refresh .vc-notification-root {
     background: var(--hsl-popout-shading);
-    backdrop-filter: blur(5px);
-    border-radius: 10px;
+    border-radius: 6px; /* Clean, minimal rounding */
 }
 
-/* Spotify player: Transparent with subtle orange border */
+/*! Jimbocord v2.0.1 by Jimbo [@urthicc] */
+
+/* Spotify player: Kept transparent, minimal border */
 :is(.theme-light, .theme-dark) #vc-spotify-player {
     background: rgba(0, 0, 0, 0);
-    border: 1px solid hsl(var(--hsl-main-color) / 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle neutral border */
 }
 
-/* PinDMs icon: Orange hover effect */
+/* PinDMs icon: Simple hover effect */
 .vc-pindms-collapse-icon {
     color: currentColor;
     transition: color var(--transition-speed) ease;
 }
 
 .vc-pindms-collapse-icon:hover {
-    color: hsl(var(--hsl-main-color));
+    color: var(--hsl-main-color); /* Use theme’s main color for consistency */
 }
 
-/* Magane sticker window and modal: Orange accents for Lilo & Stitch background */
+/* Magane sticker window and modal: Compatible with Lilo & Stitch background */
 .visual-refresh div#magane div.stickerWindow,
 .visual-refresh div#magane .stickersModal .modal-content {
     background: var(--background-image) center/cover no-repeat;
     background-attachment: var(--background-attachment);
-    filter: var(--background-filter);
-    border: 2px solid hsl(var(--hsl-main-color) / 0.4);
-    border-radius: 15px;
+    filter: var(--background-filter, none); /* Fallback to none for perf */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Neutral border for visibility */
+    border-radius: 10px; /* Rounded for a fun, Stitch-like vibe */
     transition: filter var(--transition-speed) ease;
 }
 
 .visual-refresh div#magane div.stickerWindow:hover,
 .visual-refresh div#magane .stickersModal .modal-content:hover {
-    filter: var(--background-filter) brightness(1.2);
+    filter: var(--background-filter, none) brightness(1.1); /* Subtle brightness boost */
 }
 
 .visual-refresh div#magane div.stickerWindow:before,
@@ -120,24 +114,12 @@
     z-index: -1;
 }
 
-/* Packs toolbar: Orange shading with hover */
+/* Packs toolbar: Minimal styling */
 .visual-refresh div#magane div.stickerWindow div.packs-toolbar {
     background: var(--hsl-card-shading);
-    border-bottom: 1px solid hsl(var(--hsl-main-color) / 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Neutral border */
     transition: background var(--transition-speed) ease;
 }
 
 .visual-refresh div#magane div.stickerWindow div.packs-toolbar:hover {
-    background: hsl(var(--hsl-main-color) / 0.1);
-}
-
-/* Subtle pulse animation for loading states */
-@keyframes subtle-pulse {
-    0% { box-shadow: 0 0 0 hsl(var(--hsl-main-color) / 0.3); }
-    50% { box-shadow: 0 0 10px hsl(var(--hsl-main-color) / 0.6); }
-    100% { box-shadow: 0 0 0 hsl(var(--hsl-main-color) / 0.3); }
-}
-
-.visual-refresh .vc-addon-card.loading {
-    animation: subtle-pulse 2s infinite ease-in-out;
-}
+    background: rgba(255, 255, 255, 0.05); /* Subtle hover effect */
